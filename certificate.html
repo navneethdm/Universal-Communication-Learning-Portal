@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AccessComm - Certificate</title>
+
+  <meta name="description" content="Download your AccessComm Certificate of Completion.">
+  <meta name="keywords" content="certificate, accessibility, braille, sign language">
+  <meta property="og:title" content="AccessComm Certificate">
+
+  <link rel="icon" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <style>
+    .cert-page{
+      padding:50px 0;
+    }
+
+    .cert-border{
+      border:2px dashed var(--primary);
+      padding:30px;
+      border-radius:8px;
+    }
+
+    .cert-top{
+      font-size:.9rem;
+      text-transform:uppercase;
+      letter-spacing:2px;
+      color:var(--light);
+    }
+
+    .center{
+      text-align:center;
+    }
+
+  </style>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <h2 class="logo">AccessComm</h2>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="learn.html">Learn</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="certificate.html" class="active">Certificate</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <button id="themeBtn">🌙 Dark</button>
+  </div>
+</header>
+
+<main>
+  <section class="cert-page">
+    <div class="container">
+
+      <h1 class="center mb-1">Your Certificate</h1>
+      <p class="center">
+        Congratulations on completing the Universal Communication course!
+      </p>
+
+      <div class="certificate" id="certificateCard">
+        <div class="cert-border">
+
+          <p class="cert-top">Certificate of Completion</p>
+
+          <h2 class="mb-1">Universal Communication Learning</h2>
+
+          <p>This certifies that</p>
+
+          <h2 id="certName">—</h2>
+
+          <p>
+            has successfully completed the <strong>AccessComm</strong> course covering
+          </p>
+
+          <p><strong>Sign Language · Braille · Morse Code</strong></p>
+        </div>
+      </div>
+
+      <div class="center mt-1">
+        <button class="download-btn" onclick="downloadPDF()">
+          ⬇ Download PDF
+        </button>
+
+        <a href="quiz.html" class="btn btn-outline">
+          Retake Quiz
+        </a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-grid">
+
+    <div>
+      <h4>AccessComm</h4>
+      <p class="small-text">
+        Free interactive learning for everyone.
+      </p>
+    </div>
+
+    <div>
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 AccessComm - Amrita School of Computing.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

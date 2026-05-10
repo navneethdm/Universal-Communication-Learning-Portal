@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AccessComm — Learn Sign Language, Braille & Morse Code</title>
+  <meta name="description" content="Choose a communication system to learn: Sign Language, Braille, or Morse Code." />
+  <meta name="keywords" content="learn sign language, learn braille, learn morse code" />
+  <meta property="og:title" content="AccessComm — Learn" />
+  <meta property="og:description" content="Start learning Sign Language, Braille or Morse Code." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .learn-hero { padding: 50px 0 30px; text-align: center; }
+    .learn-table-section { padding: 40px 0; }
+  </style>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <h2 class="logo">AccessComm</h2>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="learn.html" class="active" aria-current="page">Learn</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="certificate.html">Certificate</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="themeBtn" aria-label="Toggle dark mode">🌙 Dark</button>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="learn-hero" aria-labelledby="learn-heading">
+    <div class="container">
+      <h1 id="learn-heading">Learn & Practice</h1>
+      <p>Pick a communication system below and start learning at your own pace.</p>
+      <a href="#comparison" class="btn btn-outline" style="margin-top:8px;">Compare Systems ↓</a>
+    </div>
+  </section>
+
+  <!-- Jump nav anchors -->
+  <section aria-labelledby="modules-heading">
+    <div class="container">
+      <h2 id="modules-heading" class="visually-hidden">Learning Modules</h2>
+      <div class="cards">
+        <article class="card" id="sign-card" aria-labelledby="lc1">
+          <div style="font-size:3rem;text-align:center;margin-bottom:12px;">🤟</div>
+          <h3 id="lc1">Sign Language</h3>
+          <p>Visual language using hand shapes, movements, and facial expressions. Primary language for the Deaf community.</p>
+          <ul class="styled-list" style="margin:12px 0;">
+            <li>26-letter ASL alphabet</li>
+            <li>Photo illustrations per letter</li>
+          </ul>
+          <a href="sign.html" class="btn gradient" style="margin-top:auto;text-align:center;">Start →</a>
+        </article>
+        <article class="card" id="braille-card" aria-labelledby="lc2">
+          <div style="font-size:3rem;text-align:center;margin-bottom:12px;">⠃⠗⠁⠊⠇⠇⠑</div>
+          <h3 id="lc2">Braille</h3>
+          <p>A tactile writing system of raised dots representing letters, numbers, and punctuation for people with visual impairments.</p>
+          <ul class="styled-list" style="margin:12px 0;">
+            <li>Full A–Z Braille characters</li>
+            <li>Dot pattern reference</li>
+          </ul>
+          <a href="braille.html" class="btn gradient" style="margin-top:auto;text-align:center;">Start →</a>
+        </article>
+        <article class="card" id="morse-card" aria-labelledby="lc3">
+          <div style="font-size:3rem;text-align:center;margin-bottom:12px;">📡</div>
+          <h3 id="lc3">Morse Code</h3>
+          <p>A method of encoding text using sequences of dots and dashes, used in telegraphy and emergency signalling.</p>
+          <ul class="styled-list" style="margin:12px 0;">
+            <li>Full A–Z Morse reference</li>
+            <li>Live text-to-Morse converter</li>
+          </ul>
+          <a href="morse.html" class="btn gradient" style="margin-top:auto;text-align:center;">Start →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table (thead/tbody/tfoot + colspan + scope + caption) -->
+  <section class="learn-table-section" id="comparison" aria-labelledby="table-heading">
+    <div class="container">
+      <h2 id="table-heading">Compare Communication Systems</h2>
+      <p style="margin-bottom:1.5rem;">Use this table to understand the key differences between the three systems.</p>
+      <div class="table-wrap">
+        <table>
+          <caption style="text-align:center;">Comparison of Sign Language, Braille, and Morse Code</caption>
+          <thead>
+            <tr>
+              <th scope="col">Feature</th>
+              <th scope="col">Sign Language</th>
+              <th scope="col">Braille</th>
+              <th scope="col">Morse Code</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="row"><strong>Primary Sense</strong></td>
+              <td>Visual</td>
+              <td>Touch</td>
+              <td>Sound / Visual</td>
+            </tr>
+            <tr>
+              <td scope="row"><strong>Used By</strong></td>
+              <td>Deaf / Hard of Hearing</td>
+              <td>Blind / Visually Impaired</td>
+              <td>Emergency / Military</td>
+            </tr>
+            <tr>
+              <td scope="row"><strong>Medium</strong></td>
+              <td>Hand gestures</td>
+              <td>Raised dots on paper</td>
+              <td>Dots and dashes</td>
+            </tr>
+            <tr>
+              <td scope="row"><strong>Origin</strong></td>
+              <td>18th century France</td>
+              <td>1824 — Louis Braille</td>
+              <td>1837 — Samuel Morse</td>
+            </tr>
+            <tr>
+              <td scope="row"><strong>Variants</strong></td>
+              <td colspan="2" style="text-align:center; font-style:italic;">Both have country-specific variants (ASL, BSL, UEB, Grade 2)</td>
+              <td>International Morse Code</td>
+            </tr>
+            <tr>
+              <td scope="row"><strong>Digital Use</strong></td>
+              <td>Video / AI recognition</td>
+              <td>Screen readers / Refreshable displays</td>
+              <td>Ham radio / Emergency beacons</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4" style="text-align: center;">All three systems are recognised by international accessibility standards and remain in active global use.</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h4>AccessComm</h4>
+      <p style="font-size:0.9rem;max-width:260px;">Free interactive learning for Sign Language, Braille, and Morse Code.</p>
+    </div>
+    <div>
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#comparison">Comparison Table</a></li>
+        <li><a href="sign.html">Sign Language</a></li>
+        <li><a href="braille.html">Braille</a></li>
+        <li><a href="morse.html">Morse Code</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 AccessComm — Amrita School of Computing, Amritapuri.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

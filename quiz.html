@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AccessComm — Test Your Knowledge Quiz</title>
+  <meta name="description" content="Test your knowledge of Sign Language, Braille, and Morse Code with our interactive quiz." />
+  <meta name="keywords" content="sign language quiz, braille quiz, morse code quiz, accessibility quiz" />
+  <meta property="og:title" content="AccessComm Quiz" />
+  <meta property="og:description" content="Test your communication knowledge." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .quiz-section { padding: 50px 0; }
+    form.card { max-width: 640px; margin: 0 auto; }
+  </style>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <h2 class="logo">AccessComm</h2>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="learn.html">Learn</a>
+      <a href="quiz.html" class="active" aria-current="page">Quiz</a>
+      <a href="certificate.html">Certificate</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="themeBtn" aria-label="Toggle dark mode">🌙 Dark</button>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="quiz-section" aria-labelledby="quiz-heading">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:2rem;">
+        <h1 id="quiz-heading">Knowledge Quiz</h1>
+        <p>Answer 3 randomly selected questions on Sign Language, Braille, and Morse Code.</p>
+      </div>
+
+      <form class="card" id="quizForm" novalidate aria-live="polite">
+        <p id="progressText" style="font-weight:600;margin-bottom:10px;">Question 1 of 3</p>
+        <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Quiz progress">
+          <div id="progressFill"></div>
+        </div>
+        <div class="question" id="questionArea"></div>
+        <span class="form-error" id="quizError" style="margin-bottom:12px;">Please select an answer before continuing.</span>
+        <button type="submit" class="btn gradient" style="width:100%;margin-top:8px;">Next →</button>
+      </form>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div><h4>AccessComm</h4><p style="font-size:0.9rem;">Free interactive learning for everyone.</p></div>
+    <div><h4>Pages</h4><ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="learn.html">Learn</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 AccessComm — Amrita School of Computing.</p></div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AccessComm — Contact Us</title>
+  <meta name="description" content="Get in touch with AccessComm for support, volunteering, or partnership enquiries." />
+  <meta name="keywords" content="contact accessibility, disability help, accesscomm support" />
+  <meta property="og:title" content="Contact AccessComm" />
+  <meta property="og:description" content="Reach out to us for support or collaboration." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-hero { padding: 50px 0 30px; text-align: center; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 40px 0; }
+    @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+
+    input:not(:placeholder-shown):invalid,
+    textarea:not(:placeholder-shown):invalid {
+      border: 2px solid red;
+    }
+
+    input:not(:placeholder-shown):valid,
+    textarea:not(:placeholder-shown):valid {
+      border: 2px solid green;
+    }
+  </style>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <h2 class="logo">AccessComm</h2>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="learn.html">Learn</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="certificate.html">Certificate</a>
+      <a href="contact.html" class="active" aria-current="page">Contact</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="themeBtn" aria-label="Toggle dark mode">🌙 Dark</button>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="contact-hero" aria-labelledby="contact-heading">
+    <div class="container">
+      <h1 id="contact-heading">Contact Us</h1>
+      <p>Have a question, want to volunteer, or need support? We're here to help.</p>
+      <!-- In-page anchor navigation -->
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:12px;">
+        <a href="#general-form" class="btn btn-outline">General Enquiry</a>
+        <a href="#volunteer-form" class="btn btn-outline">Volunteer</a>
+        <a href="#feedback-form" class="btn btn-outline">Feedback</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-section">
+    <div class="container contact-grid">
+
+      <!-- FORM 1: General Contact -->
+      <div id="general-form">
+        <h2>General Enquiry</h2>
+        <p style="margin-bottom:1.5rem;">Fill in this form and we'll get back to you within 48 hours.</p>
+        <form id="contactForm">
+
+          <fieldset>
+            <legend>Personal Details</legend>
+            <div class="form-group">
+              <label for="fullName">Full Name *</label>
+              <input type="text" id="fullName" name="fullName"
+                placeholder="e.g. John Doe"
+                required
+                pattern="[A-Za-z\s]{2,50}"
+                minlength="2" maxlength="50"
+                autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email"
+                placeholder="name@.com"
+                required
+                autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone"
+                placeholder="+91 98765 43210"
+                pattern="[+]?[0-9\s\-]{7,15}"
+                autocomplete="tel" />
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Enquiry Details</legend>
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <input type="text" id="subject" name="subject"
+                placeholder="e.g. Question about Braille module"
+                required minlength="5" />
+            </div>
+            <div class="form-group">
+              <label for="category">Category</label>
+              <select id="category" name="category">
+                <option value="">— Select a category —</option>
+                <option value="learning">Learning Support</option>
+                <option value="technical">Technical Issue</option>
+                <option value="partnership">Partnership</option>
+                <option value="feedback">Feedback</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message"
+                rows="5"
+                placeholder="Tell us how we can help you..."
+                required minlength="20"></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>How did you hear about us?</legend>
+            <div class="radio-group">
+              <label><input type="radio" name="referral" value="social" /> Social Media</label>
+              <label><input type="radio" name="referral" value="friend" /> Friend / Family</label>
+              <label><input type="radio" name="referral" value="school" /> School / College</label>
+              <label><input type="radio" name="referral" value="search" /> Search Engine</label>
+              <label><input type="radio" name="referral" value="other" /> Other</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Accessibility Needs</legend>
+            <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:8px;">Select any that apply so we can better support you:</p>
+            <div class="check-group">
+              <label><input type="checkbox" name="access" value="screen-reader" /> Screen Reader</label>
+              <label><input type="checkbox" name="access" value="captions" /> Captions</label>
+              <label><input type="checkbox" name="access" value="interpreter" /> Sign Language Interpreter</label>
+              <label><input type="checkbox" name="access" value="none" /> None required</label>
+            </div>
+          </fieldset>
+
+          <div class="form-group">
+            <label for="dob">Date of Birth (optional)</label>
+            <input type="date" id="dob" name="dob" max="2010-01-01" />
+          </div>
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" placeholder="e.g. 22" min="5" max="120" />
+          </div>
+
+          <div id="formAlert" style="display:none;"></div>
+          <button type="submit" class="btn gradient" style="width:100%;margin-top:8px;">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Right column: Volunteer form + map -->
+      <div>
+
+        <!-- FORM 2: Volunteer -->
+        <div id="volunteer-form" style="margin-bottom:3rem;">
+          <h2>Volunteer With Us</h2>
+          <p style="margin-bottom:1.5rem;">Help us make communication accessible for more people.</p>
+          <form id="volunteerForm">
+            <fieldset>
+              <legend>Volunteer Details</legend>
+              <div class="form-group">
+                <label for="vName">Full Name *</label>
+                <input type="text" id="vName" name="vName" placeholder="Your name" required pattern="[A-Za-z\s]{2,50}" />
+              </div>
+              <div class="form-group">
+                <label for="vEmail">Email *</label>
+                <input type="email" id="vEmail" name="vEmail" placeholder="you@email.com" required />
+              </div>
+              <div class="form-group">
+                <label for="vRole">Area of Interest</label>
+                <select id="vRole" name="vRole">
+                  <option value="">— Choose —</option>
+                  <option value="teaching">Teaching / Tutoring</option>
+                  <option value="content">Content Creation</option>
+                  <option value="tech">Web Development</option>
+                  <option value="outreach">Community Outreach</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="vAvail">Hours per week available</label>
+                <input type="number" id="vAvail" name="vAvail" placeholder="e.g. 5" min="1" max="40" />
+              </div>
+            </fieldset>
+            <button type="submit" class="btn gradient" style="width:100%;">Apply to Volunteer</button>
+            <div id="volunteerAlert" style="display:none;margin-top:12px;"></div>
+          </form>
+        </div>
+
+        <!-- FORM 3: Feedback with rating -->
+        <div id="feedback-form">
+          <h2>Quick Feedback</h2>
+          <p style="margin-bottom:1.5rem;">Help us improve AccessComm with a short rating.</p>
+          <form id="feedbackForm">
+            <fieldset>
+              <legend>Your Experience</legend>
+              <div class="form-group">
+                <label for="fbName">Name (optional)</label>
+                <input type="text" id="fbName" name="fbName" placeholder="Anonymous" />
+              </div>
+              <div class="form-group">
+                <label>How would you rate AccessComm?</label>
+                <div class="radio-group">
+                  <label><input type="radio" name="rating" value="5" required /> ⭐⭐⭐⭐⭐ Excellent</label>
+                  <label><input type="radio" name="rating" value="4" /> ⭐⭐⭐⭐ Good</label>
+                  <label><input type="radio" name="rating" value="3" /> ⭐⭐⭐ Average</label>
+                  <label><input type="radio" name="rating" value="2" /> ⭐⭐ Poor</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="fbComment">Comments</label>
+                <textarea id="fbComment" name="fbComment" rows="3" placeholder="What can we improve?"></textarea>
+              </div>
+            </fieldset>
+            <button type="submit" class="btn gradient" style="width:100%;">Submit Feedback</button>
+            <div id="feedbackAlert" style="display:none;margin-top:12px;"></div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- iFrame: Google Maps embed -->
+  <section style="padding:0 0 60px;" aria-labelledby="map-heading">
+    <div class="container">
+      <h2 id="map-heading">Find Us</h2>
+      <p style="margin-bottom:1rem;">Amrita School of Computing, Amritapuri Campus, Kollam, Kerala.</p>
+      <div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.066!2d76.4817!3d9.0960!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b062b8d8c3af5e5%3A0x2b5e5e5e5e5e5e5e!2sAmrita%20School%20of%20Computing%2C%20Amritapuri!5e0!3m2!1sen!2sin!4v1620000000000"
+          width="100%"
+          height="380"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          title="Map showing Amrita School of Computing, Amritapuri Campus location">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h4>AccessComm</h4>
+      <p style="font-size:0.9rem;max-width:260px;">Free interactive learning for Sign Language, Braille, and Morse Code.</p>
+    </div>
+    <div>
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+    <div></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 AccessComm — Amrita School of Computing, Amritapuri.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AccessComm — About Us</title>
+  <meta name="description" content="Learn about the AccessComm team and our mission to make communication accessible to everyone." />
+  <meta name="keywords" content="about accesscomm, accessibility mission, disability communication team" />
+  <meta property="og:title" content="About AccessComm" />
+  <meta property="og:description" content="Our mission: universal communication for everyone." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .about-hero { padding: 60px 0 30px; text-align: center; }
+    .team-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 2rem; }
+     .team-card{
+ text-align:center;
+
+}
+    .avatar { width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 12px; font-size: 2.2rem; display: flex; align-items: center; justify-content: center; background: rgba(108,99,255,0.1); border: 3px solid var(--primary);}
+  </style>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <h2 class="logo">AccessComm</h2>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="learn.html">Learn</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="certificate.html">Certificate</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html" class="active" aria-current="page">About</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="themeBtn" aria-label="Toggle dark mode">🌙 Dark</button>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="about-hero" aria-labelledby="about-heading">
+    <div class="container">
+      <h1 id="about-heading">About AccessComm</h1>
+      <p>We are a team of students at Amrita School of Computing who believe communication is a fundamental human right. AccessComm was built to make three critical communication systems — Sign Language, Braille, and Morse Code — freely accessible to everyone.</p>
+    </div>
+  </section>
+
+  <!-- Team Cards -->
+  <section style="padding:40px 0;" aria-labelledby="team-heading" id="team">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">The Builders</span>
+        <h2 id="team-heading">Our Team</h2>
+        <p>Three students from the S2 B.Tech CSE AI programme at Amrita School of Computing.</p>
+      </div>
+      <div class="team-grid">
+        <article class="card team-card" aria-labelledby="t1">
+          <img src="images/Sidharth.jpeg"
+     alt="Sidharth R Menon"
+     class="avatar-img">
+          <h3 id="t1">Sidharth R Menon</h3>
+
+<a href="https://github.com/Sidharth-R-M"
+   target="_blank"
+   class="github-link">
+   GitHub Profile
+</a>
+
+<p style="margin-top:10px;font-size:0.9rem;">
+  Helped in structuring and creating all HTML files.
+</p>
+        </article>
+        <article class="card team-card" aria-labelledby="t2">
+          <img src="images/Jay.jpeg"
+     alt="Jayasurya Jay Nair"
+     class="avatar-img">
+          <h3 id="t2">Jayasurya Jay Nair</h3>
+
+<a href="https://github.com/dieanker"
+   target="_blank"
+   class="github-link">
+   GitHub Profile
+</a>
+
+<p style="margin-top:10px;font-size:0.9rem;">
+  Helped to make the website pleasing to the eye by adding all CSS.
+</p>
+        </article>
+        <article class="card team-card" aria-labelledby="t3">
+          <img src="images/Navneeth.jpeg"
+     alt="Navneeth Dinukumar Menon"
+     class="avatar-img">
+          <h3 id="t3">Navneeth Dinukumar Menon</h3>
+
+<a href="https://github.com/navneethdm"
+   target="_blank"
+   class="github-link">
+   GitHub Profile
+</a>
+
+<p style="margin-top:10px;font-size:0.9rem;">
+  Helped to make the website responsive using JS.
+</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h4>AccessComm</h4>
+      <p style="font-size:0.9rem;max-width:260px;">Free interactive learning for Sign Language, Braille, and Morse Code.</p>
+    </div>
+    <div>
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 AccessComm — Amrita School of Computing, Amritapuri.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
