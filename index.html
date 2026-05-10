@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AccessComm — Learn Universal Communication</title>
+  <meta name="description" content="AccessComm teaches Sign Language, Braille, and Morse Code to break communication barriers for everyone." />
+  <meta name="keywords" content="sign language, braille, morse code, accessibility, disability communication" />
+  <meta property="og:title" content="AccessComm — Universal Communication for All" />
+  <meta property="og:description" content="Learn Sign Language, Braille, and Morse Code interactively." />
+  <meta property="og:image" content="images/og-image.png" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Internal style for page-specific tweaks -->
+  <style>
+    .home-section { padding: 60px 0; }
+    .why-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 2rem; }
+  </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="navbar">
+  <div class="container nav-content">
+    <h2 class="logo">AccessComm</h2>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="index.html" class="active" aria-current="page">Home</a>
+      <a href="learn.html">Learn</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="certificate.html">Certificate</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="themeBtn" aria-label="Toggle dark mode">🌙 Dark</button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== MAIN ===== -->
+<main>
+
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="container">
+      <h1 id="hero-heading">Learn Universal Communication</h1>
+      <p>Break communication barriers by learning Sign Language, Braille, and Morse Code — for free, interactively, and at your own pace.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:8px;">
+        <a href="learn.html" class="btn gradient">Start Learning →</a>
+        <a href="about.html" class="btn btn-outline">About Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Course Cards -->
+  <section class="home-section" id="courses" style="background:var(--bg);" aria-labelledby="courses-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What You'll Learn</span>
+        <h2 id="courses-heading">Choose Your Path</h2>
+        <p>Three essential communication systems — each with interactive lessons, alphabet guides, and quizzes.</p>
+      </div>
+      <div class="cards">
+        <article class="card" aria-labelledby="c1">
+          <div style="font-size:2.5rem;margin-bottom:8px;">🤟</div>
+          <h3 id="c1">Sign Language</h3>
+          <p>Learn the ASL alphabet with visual hand-sign illustrations for all 26 letters.</p>
+          <a href="sign.html" class="btn btn-outline" style="margin-top:auto;">Explore →</a>
+        </article>
+        <article class="card" aria-labelledby="c2">
+          <div style="font-size:2.5rem;margin-bottom:8px;">⠃⠗</div>
+          <h3 id="c2">Braille</h3>
+          <p>Discover the tactile writing system used by people with visual impairments worldwide.</p>
+          <a href="braille.html" class="btn btn-outline" style="margin-top:auto;">Explore →</a>
+        </article>
+        <article class="card" aria-labelledby="c3">
+          <div style="font-size:2.5rem;margin-bottom:8px;">📡</div>
+          <h3 id="c3">Morse Code</h3>
+          <p>Master the dot-dash telegraph system and use our live text-to-Morse converter.</p>
+          <a href="morse.html" class="btn btn-outline" style="margin-top:auto;">Explore →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- In-page anchor link section -->
+  <section class="home-section" id="why" aria-labelledby="why-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Why It Matters</span>
+        <h2 id="why-heading">Breaking Barriers Together</h2>
+        <p>Communication is a fundamental human right. <a href="#courses">Explore our courses</a> to get started.</p>
+      </div>
+      <!-- Inline SVG graphic -->
+      <div style="text-align:center;margin:2rem 0;" aria-label="Illustration showing inclusive communication">
+        <svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg" width="100%" max-width="500" role="img" aria-label="Three icons representing sign language, braille, and morse code connected by a line">
+          <title>Universal Communication</title>
+          <desc>Diagram showing Sign Language, Braille, and Morse Code as three pillars of universal communication</desc>
+          <!-- Connecting line -->
+          <line x1="100" y1="100" x2="400" y2="100" stroke="#6c63ff" stroke-width="2" stroke-dasharray="6,4"/>
+          <!-- Node 1 - Sign Language -->
+          <circle cx="100" cy="100" r="40" fill="#eef2ff" stroke="#6c63ff" stroke-width="2"/>
+          <text x="102" y="115" text-anchor="middle" font-size="40" font-family="Arial">🤟</text>
+          <text x="100" y="160" text-anchor="middle" font-size="12" fill="#6c63ff" font-family="Poppins,Arial" font-weight="600">Sign</text>
+          <!-- Node 2 - Braille -->
+          <circle cx="250" cy="100" r="40" fill="#faf5ff" stroke="#9333ea" stroke-width="2"/>
+          <text x="251" y="115" text-anchor="middle" font-size="40" font-family="Arial">⠃⠗</text>
+          <text x="250" y="160" text-anchor="middle" font-size="12" fill="#9333ea" font-family="Poppins,Arial" font-weight="600">Braille</text>
+          <!-- Node 3 - Morse -->
+          <circle cx="400" cy="100" r="40" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+          <text x="401" y="110" text-anchor="middle" font-size="35" font-family="Arial">📡</text>
+          <text x="400" y="160" text-anchor="middle" font-size="12" fill="#3b82f6" font-family="Poppins,Arial" font-weight="600">Morse</text>
+          <!-- Center label -->
+          <rect x="175" y="40" width="150" height="30" rx="15" fill="#6c63ff"/>
+          <text x="250" y="60" text-anchor="middle" font-size="11" fill="white" font-family="Poppins,Arial" font-weight="600">Universal Communication</text>
+        </svg>
+      </div>
+
+      <div class="why-grid">
+        <div class="card">
+          <h3>👂 Hearing Impairment</h3>
+          <p>Sign language is the primary language for millions of deaf individuals globally.</p>
+        </div>
+        <div class="card">
+          <h3>👁️ Visual Impairment</h3>
+          <p>Braille enables people who are blind to read, write, and access information independently.</p>
+        </div>
+        <div class="card">
+          <h3>🌍 Emergency Use</h3>
+          <p>Morse code remains critical in aviation, military, and emergency communications worldwide.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ using details/summary -->
+  <section class="home-section" id="faq" aria-labelledby="faq-heading">
+    <div class="container" style="max-width:700px;">
+      <div class="section-header">
+        <span class="section-tag">Help</span>
+        <h2 id="faq-heading">Frequently Asked Questions</h2>
+      </div>
+      <details>
+        <summary>Is AccessComm completely free?</summary>
+        <p>Yes! All lessons, quizzes, and certificates are 100% free with no registration required.</p>
+      </details>
+      <details>
+        <summary>Do I need any prior knowledge to start?</summary>
+        <p>No prerequisites at all. Our lessons are designed for complete beginners and progress at your pace.</p>
+      </details>
+      <details>
+        <summary>Can I get a certificate after the quiz?</summary>
+        <p>Absolutely. Complete the quiz and enter your name to generate and download a PDF certificate instantly.</p>
+      </details>
+      <details>
+        <summary>What is the difference between ASL and other sign languages?</summary>
+        <p>ASL (American Sign Language) is specific to North America. Different countries have their own sign languages, though we teach the ASL alphabet as a widely recognised starting point.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- External resources -->
+  <aside class="home-section" aria-labelledby="resources-heading" style="background:var(--bg);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Go Further</span>
+        <h2 id="resources-heading">External Resources</h2>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <h3>WHO Disability Report</h3>
+          <p>Global data on disability and accessibility from the World Health Organization.</p>
+          <a href="https://www.who.int/health-topics/disability" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-top:auto;">Visit WHO ↗</a>
+        </div>
+        <div class="card">
+          <h3>W3C Web Accessibility</h3>
+          <p>Official WCAG guidelines for building accessible websites and applications.</p>
+          <a href="https://www.w3.org/WAI/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-top:auto;">Visit W3C ↗</a>
+        </div>
+        <div class="card">
+          <h3>UN CRPD</h3>
+          <p>The United Nations Convention on the Rights of Persons with Disabilities.</p>
+          <a href="https://www.un.org/development/desa/disabilities/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="margin-top:auto;">Visit UN ↗</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h4>AccessComm</h4>
+      <p style="font-size:0.9rem;max-width:260px;">Empowering communication for everyone through free, interactive learning resources.</p>
+    </div>
+    <div>
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="certificate.html">Certificate</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 AccessComm — Made with ♥ at Amrita School of Computing, Amritapuri.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
